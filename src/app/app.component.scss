@@ -53,6 +53,12 @@
         }
         .body2{
             position: relative;
+            .header{
+                font-size: 26px;
+            }
+            input{
+                width: 90%;
+            }
         }
     }
   }
