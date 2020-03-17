@@ -15,7 +15,7 @@ import { environment } from '../environments/environment';
     FilterPipe
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     FormsModule,
     NgxLoadingModule.forRoot({}),
