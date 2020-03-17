@@ -1,0 +1,59 @@
+.main{
+    .body1{
+        position: fixed;
+        border-right: 2px solid #fff;
+        .global{
+            margin: 10px 20px;
+            background: #010101;
+            h5{
+                color: #9e9595;
+            }
+            h3{
+                color: #b3adad;
+            }
+            h2{
+                color: #fff;
+            }
+        }
+    }
+    .body2{
+        input{
+            margin: 0px 20px;;
+        }
+        position: absolute;
+        right: 0px;
+        .card{
+            margin: 10px 20px;
+            background: #010101;
+           .card-body{
+            padding: 10px;
+            h3{
+                margin: 0px;
+                color: #9e9595;
+            }
+            p{
+                margin: 0px;
+                color: #fff;
+            }
+           }
+        }
+    }
+    .body1,.body2{
+        .header{
+            color: #fff !important;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main{
+        .body1{
+            position: relative;
+        }
+        .body2{
+            position: relative;
+        }
+    }
+  }
+  
