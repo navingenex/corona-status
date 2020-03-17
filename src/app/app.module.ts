@@ -6,6 +6,8 @@ import {FormsModule} from '@angular/forms';
 import { NgxLoadingModule } from 'ngx-loading';
 import { AppComponent } from './app.component';
 import { FilterPipe } from './filter.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { FilterPipe } from './filter.pipe';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    NgxLoadingModule.forRoot({})
+    NgxLoadingModule.forRoot({}),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
