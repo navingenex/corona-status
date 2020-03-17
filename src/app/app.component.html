@@ -34,7 +34,7 @@
     <div class="card" *ngFor="let item of allCountryData|filter:country">
       <div class="card-body">
         <h3>{{item?.country}}</h3>
-        <p>Cases: {{item?.cases|number}} Today: {{item?.todayCases|number}} | Active: {{item?.active|number}}</p>
+        <p>Cases: {{item?.cases|number}} | Today: {{item?.todayCases|number}} | Active: {{item?.active|number}}</p>
         <p>Deaths: {{item?.deaths|number}} | Today: {{item?.todayDeaths|number}}</p>
         <p>Recovered: {{item?.recovered|number}} | Critical: {{item?.critical|number}}</p>
       </div>
