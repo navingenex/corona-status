@@ -1,5 +1,5 @@
 <div class="row main">
-  <div class="col-sm-12 col-md-6 col-lg-6 body1">
+  <div class="col-sm-12 col-md-3 col-lg-4 body1">
     <h2 class="header">Global Coronavirus information</h2>
     <div class="card global">
       <div class="card-body">
@@ -25,17 +25,20 @@
 
 
   </div>
-  <div class="col-sm-12 col-md-6 col-lg-6 body2" *ngIf="allCountryData">
+  <div class="col-sm-12 col-md-9 col-lg-8 body2" *ngIf="allCountryData">
     <h2 class="header">Coronavirus by country</h2>
     <div class="form-group">
-      <input type="text"
-        class="form-control" [(ngModel)]="country" name="filter" id="" aria-describedby="helpId" placeholder="Search By country">
+      <input type="text" class="form-control" [(ngModel)]="country" name="filter" id="" aria-describedby="helpId"
+        placeholder="Search By country">
     </div>
     <div class="card" *ngFor="let item of allCountryData|filter:country">
       <div class="card-body">
         <h3>{{item?.country}}</h3>
-        <p>Cases: {{item?.cases|number}} | Today: {{item?.todayCases|number}} | Active: {{item?.active|number}}</p>
-        <p>Deaths: {{item?.deaths|number}} | Today: {{item?.todayDeaths|number}}</p>
+        <p>Cases: {{item?.cases|number}} | <span [ngStyle]="{'background': item?.todayCases>0?'red':''}">Today:
+            {{item?.todayCases|number}}</span> | Active:
+          {{item?.active|number}}</p>
+        <p>Deaths: {{item?.deaths|number}} | <span [ngStyle]="{'background': item?.todayDeaths>0?'red':''}">Today:
+            {{item?.todayDeaths|number}}</span></p>
         <p>Recovered: {{item?.recovered|number}} | Critical: {{item?.critical|number}}</p>
       </div>
     </div>
